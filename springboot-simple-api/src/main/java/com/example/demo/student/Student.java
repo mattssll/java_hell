@@ -25,7 +25,7 @@ public class Student {
     private Integer age;
 
     // Constructors, auto generated with command enter
-    public Student() {
+    public Student() {  // NULL constructor
     }
 
     public Student(Long id,

@@ -15,11 +15,13 @@ import java.util.Optional;
 public class StudentService {
 
     private final StudentRepository studentRepository;
-    // Implementation of our interface with dependency injection, GET
+    // Implementation of our interface (below) with dependency injection, GET
+
     @Autowired
     public StudentService(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
+        this.studentRepository = studentRepository;  // dependency injection instead of instantiate object
     }
+
 
     // GET
     public List<Student> getStudents() {
@@ -48,14 +50,11 @@ public class StudentService {
 
     // UPDATE
     @Transactional
-    public void updateStudent(
-            Long studentId,
-            String name,
-            String email) {
+    public void updateStudent(Long studentId, String name, String email) {
+
         Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new IllegalStateException(
-                        "student with id " + studentId + "does not exists"
-        ));
+                        "student with id " + studentId + "does not exists"));
 
         if (name != null &&
                 name.length() > 0 &&
