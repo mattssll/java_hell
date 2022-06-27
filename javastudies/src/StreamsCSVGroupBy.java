@@ -1,8 +1,9 @@
-import StreamsCSVEtc.services.Parser;
+import StreamsCSVEtc.services.ParserCSV;
+import com.univocity.parsers.csv.CsvParserSettings;
 
 import java.io.IOException;
 
-public class StreamsCSVGroupBy extends Parser {
+public class StreamsCSVGroupBy extends ParserCSV {
     public static void main(String[] args) throws IOException {
         final String fileUserDir = System.getProperty("user.dir");
         String filePath = fileUserDir + "/src/StreamsCSVEtc/Workbook.csv";

@@ -9,15 +9,18 @@ public class People {
     public String postcode;
     public String phone;
     public Float creditLimit;
-    public Date birthday;
+    public String birthday;
 
-    public People(String name, String address, String postcode, String phone, Float creditLimit, Date birthday) {
+    public People(String name, String address, String postcode, String phone, Float creditLimit, String birthday) {
         this.name = name;
         this.address = address;
         this.postcode = postcode;
         this.phone = phone;
         this.creditLimit = creditLimit;
         this.birthday = birthday;
+    }
+
+    public People() {
     }
 
     public String getName() {
@@ -36,7 +39,7 @@ public class People {
         return phone;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
