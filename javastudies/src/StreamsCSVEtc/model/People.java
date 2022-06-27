@@ -1,25 +1,23 @@
-package StreamsCSVEtc.Models;
-
+package StreamsCSVEtc.model;
 
 import java.util.Date;
 
-public class People {
-    private String name;
-    private String address;
-    private String postcode;
-    private String phone;
-    private Float creditLimit;
-    private Date birthday;
-    private String gender;
 
-    public People(String name, String address, String postcode, String phone, Float creditLimit, Date birthday, String gender) {
+public class People {
+    public String name;
+    public String address;
+    public String postcode;
+    public String phone;
+    public Float creditLimit;
+    public Date birthday;
+
+    public People(String name, String address, String postcode, String phone, Float creditLimit, Date birthday) {
         this.name = name;
         this.address = address;
         this.postcode = postcode;
         this.phone = phone;
         this.creditLimit = creditLimit;
         this.birthday = birthday;
-        this.gender = gender;
     }
 
     public String getName() {
@@ -42,10 +40,6 @@ public class People {
         return birthday;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
     @Override
     public String toString() {
         return "People{" +
@@ -54,10 +48,8 @@ public class People {
                 ", postcode=" + postcode +
                 ", phone=" + phone +
                 ", credit=" + creditLimit +
-                ", birthday=" + birthday +
-                ", gender=" + gender +
-                '}' +
-                "\n";
+                ", birthday=" + birthday + '}'
+                + "\n";
     }
 }
 
